@@ -49,10 +49,17 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3mE-Zx-Eee">
-                    <rect key="frame" x="183" y="334" width="48" height="30"/>
+                    <rect key="frame" x="183" y="414" width="48" height="30"/>
                     <state key="normal" title="Logout"/>
                     <connections>
                         <action selector="touchedLogoutButton:" destination="-1" eventType="touchUpInside" id="Zbc-Xo-Yt8"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FEU-E6-pky">
+                    <rect key="frame" x="138" y="284" width="138" height="30"/>
+                    <state key="normal" title="プロフィールを編集"/>
+                    <connections>
+                        <action selector="touchedEditButton:" destination="-1" eventType="touchUpInside" id="IPx-4A-u3M"/>
                     </connections>
                 </button>
             </subviews>
@@ -61,13 +68,15 @@
                 <constraint firstItem="LOF-vM-gW1" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="2zk-z3-8iA"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="keg-fE-amm" secondAttribute="trailing" constant="50" id="5up-u6-bF2"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Jl6-1V-aBK" secondAttribute="trailing" id="78T-gS-LIg"/>
+                <constraint firstItem="FEU-E6-pky" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="A5A-dx-5G7"/>
+                <constraint firstItem="3mE-Zx-Eee" firstAttribute="top" secondItem="FEU-E6-pky" secondAttribute="bottom" constant="100" id="Bad-i6-nrX"/>
                 <constraint firstItem="keg-fE-amm" firstAttribute="top" secondItem="Jl6-1V-aBK" secondAttribute="bottom" constant="50" id="JPv-d8-pzO"/>
                 <constraint firstItem="Jl6-1V-aBK" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="L1A-qP-bvx"/>
                 <constraint firstItem="keg-fE-amm" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="RjJ-s7-tNn"/>
                 <constraint firstItem="3mE-Zx-Eee" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="SFQ-KZ-xIA"/>
-                <constraint firstItem="3mE-Zx-Eee" firstAttribute="top" secondItem="LOF-vM-gW1" secondAttribute="bottom" constant="100" id="SH9-cP-yQK"/>
                 <constraint firstItem="Jl6-1V-aBK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="W4O-Nu-LM1"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="LOF-vM-gW1" secondAttribute="trailing" constant="50" id="d0e-qO-FOu"/>
+                <constraint firstItem="FEU-E6-pky" firstAttribute="top" secondItem="LOF-vM-gW1" secondAttribute="bottom" constant="50" id="lES-ch-EHV"/>
                 <constraint firstItem="LOF-vM-gW1" firstAttribute="top" secondItem="keg-fE-amm" secondAttribute="bottom" constant="50" id="yQ5-8Z-8fx"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

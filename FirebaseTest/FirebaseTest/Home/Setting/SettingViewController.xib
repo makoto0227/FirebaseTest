@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingViewController" customModule="FirebaseTest" customModuleProvider="target">
+            <connections>
+                <outlet property="emailTextField" destination="ZKZ-Jr-00Y" id="eUC-oO-G8z"/>
+                <outlet property="passwordTextField" destination="ERJ-ay-VT5" id="Tg5-rn-Xti"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZKZ-Jr-00Y">
+                    <rect key="frame" x="50" y="144" width="314" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ERJ-ay-VT5">
+                    <rect key="frame" x="50" y="228" width="314" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rQV-Z7-cL8">
+                    <rect key="frame" x="367" y="60" width="31" height="30"/>
+                    <state key="normal" title="完了"/>
+                    <connections>
+                        <action selector="touchedDoneButton:" destination="-1" eventType="touchUpInside" id="cmU-e5-VKB"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="ZKZ-Jr-00Y" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="100" id="34M-tI-MDc"/>
+                <constraint firstItem="ERJ-ay-VT5" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="5H7-jf-fhR"/>
+                <constraint firstItem="ERJ-ay-VT5" firstAttribute="top" secondItem="ZKZ-Jr-00Y" secondAttribute="bottom" constant="50" id="J6t-76-Elb"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="rQV-Z7-cL8" secondAttribute="trailing" constant="16" id="JDr-aN-n2O"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ERJ-ay-VT5" secondAttribute="trailing" constant="50" id="WuQ-EQ-WyL"/>
+                <constraint firstItem="ZKZ-Jr-00Y" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="YfV-oQ-2VK"/>
+                <constraint firstItem="rQV-Z7-cL8" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="jtL-dE-wzh"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ZKZ-Jr-00Y" secondAttribute="trailing" constant="50" id="yFx-6M-dp0"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="139" y="107"/>
+        </view>
+    </objects>
+</document>

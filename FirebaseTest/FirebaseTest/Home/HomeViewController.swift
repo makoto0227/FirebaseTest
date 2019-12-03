@@ -21,6 +21,11 @@ class HomeViewController: BaseViewController {
     }
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var passwordLabel: UILabel!
+    @IBAction func touchedEditButton(_ sender: UIButton) {
+        let vc = SettingViewController()
+        vc.myself = self.myself
+        present(vc, animated: true, completion: nil)
+    }
     var myself: UserModel = UserModel()
 }
 
