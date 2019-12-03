@@ -9,6 +9,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="FirebaseTest" customModuleProvider="target">
             <connections>
+                <outlet property="emailLabel" destination="keg-fE-amm" id="XKj-1h-4mV"/>
+                <outlet property="passwordLabel" destination="LOF-vM-gW1" id="wZI-pF-QKV"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -34,8 +36,20 @@
                         <constraint firstAttribute="height" constant="48" id="spo-A4-vXI"/>
                     </constraints>
                 </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="keg-fE-amm">
+                    <rect key="frame" x="50" y="142" width="314" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LOF-vM-gW1">
+                    <rect key="frame" x="50" y="213" width="314" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3mE-Zx-Eee">
-                    <rect key="frame" x="183" y="192" width="48" height="30"/>
+                    <rect key="frame" x="183" y="334" width="48" height="30"/>
                     <state key="normal" title="Logout"/>
                     <connections>
                         <action selector="touchedLogoutButton:" destination="-1" eventType="touchUpInside" id="Zbc-Xo-Yt8"/>
@@ -44,21 +58,20 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="LOF-vM-gW1" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="2zk-z3-8iA"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="keg-fE-amm" secondAttribute="trailing" constant="50" id="5up-u6-bF2"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Jl6-1V-aBK" secondAttribute="trailing" id="78T-gS-LIg"/>
+                <constraint firstItem="keg-fE-amm" firstAttribute="top" secondItem="Jl6-1V-aBK" secondAttribute="bottom" constant="50" id="JPv-d8-pzO"/>
                 <constraint firstItem="Jl6-1V-aBK" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="L1A-qP-bvx"/>
-                <constraint firstItem="3mE-Zx-Eee" firstAttribute="top" secondItem="Jl6-1V-aBK" secondAttribute="bottom" constant="100" id="Qk2-zX-z3r"/>
-                <constraint firstItem="3mE-Zx-Eee" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="W3W-mA-NxX"/>
+                <constraint firstItem="keg-fE-amm" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="RjJ-s7-tNn"/>
+                <constraint firstItem="3mE-Zx-Eee" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="SFQ-KZ-xIA"/>
+                <constraint firstItem="3mE-Zx-Eee" firstAttribute="top" secondItem="LOF-vM-gW1" secondAttribute="bottom" constant="100" id="SH9-cP-yQK"/>
                 <constraint firstItem="Jl6-1V-aBK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="W4O-Nu-LM1"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="LOF-vM-gW1" secondAttribute="trailing" constant="50" id="d0e-qO-FOu"/>
+                <constraint firstItem="LOF-vM-gW1" firstAttribute="top" secondItem="keg-fE-amm" secondAttribute="bottom" constant="50" id="yQ5-8Z-8fx"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="139" y="107"/>
-        </view>
-        <view contentMode="scaleToFill" id="hcw-Yp-kXs">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-            <viewLayoutGuide key="safeArea" id="Ecd-Gv-y7P"/>
-            <point key="canvasLocation" x="194" y="754"/>
         </view>
     </objects>
 </document>

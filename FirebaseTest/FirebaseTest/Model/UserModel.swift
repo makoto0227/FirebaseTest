@@ -168,25 +168,6 @@ extension UserModel {
         }
     }
     
-    static func update(request: [String: Any], image: UIImage?=nil,
-                       success:@escaping () -> Void) {
-        guard let uid = Auth.auth().currentUser?.uid else { return }
-        var req = request
-        DBRef = Database.database().reference().child(PATH).child(uid)
-        if let image = image {
-            uploadPhoto(image: image, success: { (downloadPath) in
-                req["photo_path"] = downloadPath
-                DBRef.updateChildValues(req) { error, query in
-                    success()
-                }
-            }) {}
-        } else {
-            DBRef.updateChildValues(req) { (error, query) in
-                success()
-            }
-        }
-    }
-    
     static func uploadPhoto(photoName:String?=nil, image: UIImage?, success: @escaping (String) -> Void, failure: @escaping () -> Void) -> Void{
         guard let image = image else {return}
         guard let uid = Auth.auth().currentUser?.uid else { return failure() }
@@ -252,7 +233,7 @@ extension UserModel {
         }
     }
     
-    static func delete() {
+    static func delete(success: @escaping () -> Void) {
         guard let uid = Auth.auth().currentUser?.uid else { return }
         let userRef = Database.database().reference().child(PATH).child(uid)
         let chatRoomMemberRef = Database.database().reference().child("chatRoomMember").child(uid)
@@ -260,6 +241,14 @@ extension UserModel {
         userRef.removeValue()
         chatRoomMemberRef.removeValue() //chatRoomMember から自分を削除
         clubMemberRef.removeValue()
+        let user = Auth.auth().currentUser
+        user?.delete(completion: { (error) in
+            if let error = error {
+                print(error)
+            } else {
+                success()
+            }
+        })
     }
     
     // userIdからnicknameを取得する

@@ -19,7 +19,9 @@ class HomeViewController: BaseViewController {
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }
-    
+    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var passwordLabel: UILabel!
+    var myself: UserModel = UserModel()
 }
 
 // MARK: - Life cycle
@@ -30,6 +32,11 @@ extension HomeViewController {
         if Auth.auth().currentUser?.email == nil {
             let vc = SignUpViewController()
             navigationController?.pushViewController(vc, animated: true)
+        }
+        UserModel.readMe { (me) in
+            self.myself = me
+            self.emailLabel.text = me.mail
+            self.passwordLabel.text = me.password
         }
     }
     
